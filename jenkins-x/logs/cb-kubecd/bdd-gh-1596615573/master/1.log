@@ -1,0 +1,104 @@
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rdcxs[0m
+{"level":"info","ts":1596616040.8460495,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1596616040.8465233,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-zvvq2[0m
+{"level":"info","ts":1596616041.8475862,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1596616041.8495893,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-gh-1596615573-mas-thx2s-9bj5k[0m
+{"level":"info","ts":1596616226.7519553,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1596616228.0780408,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-gh-1596615573.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/bdd-gh-1596615573 main.go
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0805 08:30:36.499510      11 metadata.go:241] Failed to unmarshal scopes: json: cannot unmarshal string into Go value of type []string
+[36mINFO[0m[0000] Resolved base name scratch to scratch        
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name scratch to scratch        
+[36mINFO[0m[0000] Built cross stage deps: map[]                
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Checking for cached layer gcr.io/jenkins-x-labs-bdd/cache:e89c91ad0c951f15b904675c41d28ed8b8f62e4ff587643befefa60d23ff6b55... 
+[36mINFO[0m[0001] No cached layer found for cmd COPY ./bin/ /  
+[36mINFO[0m[0001] Unpacking rootfs as cmd COPY ./bin/ / requires it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] Resolving paths                              
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] ENTRYPOINT ["/bdd-gh-1596615573"]            
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] COPY ./bin/ /                                
+[36mINFO[0m[0001] Resolving paths                              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Pushing layer gcr.io/jenkins-x-labs-bdd/cache:e89c91ad0c951f15b904675c41d28ed8b8f62e4ff587643befefa60d23ff6b55 to cache now 
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/bdd-gh-1596615573 to an unshallow repository
+Generating change log from git ref ccf993a9333aadda5bd02a45fcbc704bec65db95 => 1637d87967fdf629cb8715a10c4cdd3e133bedfc
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 38e1b15a09c3363d3bc2691bc17944bb133ee23f with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for cb-kubecd/bdd-gh-1596615573 and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/cb-kubecd/bdd-gh-1596615573/releases/tag/v0.0.2
+generated: /workspace/source/charts/bdd-gh-1596615573/templates/release.yaml
+Created Release bdd-gh-1596615573-0-0-2 resource in namespace **
+Updating PipelineActivity cb-kubecd-bdd-gh-1596615573-master-1 with version 0.0.2
+Updated PipelineActivities cb-kubecd-bdd-gh-1596615573-master-1 with release notes URL: https://github.com/cb-kubecd/bdd-gh-1596615573/releases/tag/v0.0.2
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file bdd-gh-1596615573-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcb-kubecd-bdd-gh-1596615573-mas-thx2s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+defaulting to the version 0.0.2 from $VERSION
+loading version stream URL https://github.com/******************/**r-versions.git ref eff3ef0ed0f27b0509590dbc356337168a899b47
+checking out ref eff3ef0ed0f27b0509590dbc356337168a899b47
+running command: git config --global credential.helper store
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app bdd-gh-1596615573 version 0.0.2 to namespace **-staging
+running command: git clone https://github.com/cb-kubecd/env-pr-1078-3-bdd-gke-dev.git **-promote-056732982
+Cloning into '**-promote-056732982'...
+cloned https://github.com/cb-kubecd/env-pr-1078-3-bdd-gke-dev.git to /tmp/**-promote-056732982
+created Pull Request https://github.com/cb-kubecd/env-pr-1078-3-bdd-gke-dev/pull/2 from dir /tmp/**-promote-056732982
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+Rebasing PullRequest due to conflict
+running command: git clone https://github.com/cb-kubecd/env-pr-1078-3-bdd-gke-dev.git **-promote-225226712
+Cloning into '**-promote-225226712'...
+cloned https://github.com/cb-kubecd/env-pr-1078-3-bdd-gke-dev.git to /tmp/**-promote-225226712
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+Pull Request https://github.com/cb-kubecd/env-pr-1078-3-bdd-gke-dev/pull/2 is merged at sha ebd69a759f3ca6780e1fe65c76cf71260cb2eee8
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names bdd-gh-1596615573, **-bdd-gh-1596615573, **-staging-bdd-gh-1596615573
